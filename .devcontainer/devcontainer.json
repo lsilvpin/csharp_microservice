@@ -1,5 +1,5 @@
 {
-	"name": "Python 3",
+	"name": "Dotnet 8.0",
 	"build": {
 		"dockerfile": "../Base.Dockerfile",
 		"context": ".."
