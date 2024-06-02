@@ -7,4 +7,8 @@ EXPOSE 8000
 RUN apt upgrade -y
 RUN apt update -y
 
-# CMD ["uvicorn", "app:app", "--host", "0.0.0.0", "--port", "80"]
+RUN dotnet restore
+RUN dotnet build
+RUN dotnet publish
+
+# CMD ["dotnet", "Main/Apps/Api/bin/Release/net8.0/Api.dll"]

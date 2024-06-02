@@ -23,7 +23,7 @@ docker run -d \
     -p $port:5074 \
     --name $container_name \
     $image_name:$image_tag \
-    sh -c "dotnet Api.dll"
+    sh -c "dotnet Main/Apps/Api/bin/Release/net8.0/Api.dll"
 throw_error_if_need
 
 timeout_sec=15
