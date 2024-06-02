@@ -20,7 +20,7 @@ docker container rm $container_name
 
 docker run -d \
     -e CSHARP_MICROSERVICE_SYS_ENV=$env_var_default \
-    -p $port:5074 \
+    -p $port:8080 \
     --name $container_name \
     $image_name:$image_tag \
     sh -c "dotnet Main/Apps/Api/bin/Release/net8.0/Api.dll"
