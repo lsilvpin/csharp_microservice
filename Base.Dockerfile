@@ -2,10 +2,11 @@ FROM mcr.microsoft.com/dotnet/sdk:8.0
 
 WORKDIR /app
 ADD . /app/
-EXPOSE 8000
 
 RUN apt upgrade -y
 RUN apt update -y
+
+RUN dotnet dev-certs https --trust
 
 RUN dotnet restore
 RUN dotnet build

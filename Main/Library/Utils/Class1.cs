@@ -1,4 +1,4 @@
-﻿namespace Services;
+﻿namespace Utils;
 public class Class1
 {
 

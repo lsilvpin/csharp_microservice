@@ -8,9 +8,9 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
-				"doggy8088.netcore-extension-pack",
+				"ms-dotnettools.csdevkit",
+				"ms-dotnettools.csharp",
 				"fernandoescolar.vscode-solution-explorer",
-				"formulahendry.dotnet-test-explorer",
 				"ms-azuretools.vscode-docker",
 				"EditorConfig.EditorConfig",
 				"GitHub.copilot",
@@ -39,9 +39,7 @@
 	"runArgs": [
 		"--privileged",
 		"--network",
-		"host",
-		"-e",
-		"MICRO_TOOLS_SYS_ENV=dev"
+		"host"
 	],
 	"mounts": [
 		// {
