@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: scharp-microservice-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: csharp-microservice
+  template:
+    metadata:
+      labels:
+        app: csharp-microservice
+    spec:
+      containers:
+      - name: csharp-microservice-container
+        image: csharp_microservice_image:v1.0.0
+        ports:
+        - containerPort: 5074
