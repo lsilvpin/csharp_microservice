@@ -1,7 +1,7 @@
 #!/bin/bash
 
 host_name=${1:-"platao"}
-port=${2:-"32000"}
+port=${2:-"32001"}
 protocol=${3:-"http"}
 
 echo "Checking if service is up..."
@@ -12,7 +12,7 @@ echo "Protocol: $protocol"
 timeout_sec=15
 limit_counter=0
 
-while [ $(curl -s -o /dev/null -w "%{http_code}" $protocol://$host_name:$port/info) != "200" ]; do
+while [ $(curl -s -o /dev/null -w "%{http_code}" $protocol://$host_name:$port/weatherforecast) != "200" ]; do
 
     echo "Service is not up yet. Waiting for 5 seconds..."
     sleep 5

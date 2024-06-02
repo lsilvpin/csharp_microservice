@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: micro-tools-deployment
+  name: scharp-microservice-deployment
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: micro-tools
+      app: csharp-microservice
   template:
     metadata:
       labels:
-        app: micro-tools
+        app: csharp-microservice
     spec:
       containers:
-      - name: micro-tools-container
-        image: micro_tools_image:v1.0.0
+      - name: csharp-microservice-container
+        image: csharp_microservice_image:v1.0.0
         ports:
-        - containerPort: 8000
+        - containerPort: 5074

@@ -9,21 +9,21 @@ function throw_error_if_need() {
 
 echo "Running Docker container..."
 
-container_name=${1:-"micro_tools_container"}
-image_name=${2:-"micro_tools_image"}
+container_name=${1:-"csharp_microservice_container"}
+image_name=${2:-"csharp_microservice_image"}
 image_tag=${3:-"v1.0.0"}
-port=${4:-"32000"}
+port=${4:-"32001"}
 env_var_default=${5:-"hml"}
 
 docker container stop $container_name
 docker container rm $container_name
 
 docker run -d \
-    -e MICRO_TOOLS_SYS_ENV=$env_var_default \
-    -p $port:8000 \
+    -e CSHARP_MICROSERVICE_SYS_ENV=$env_var_default \
+    -p $port:5074 \
     --name $container_name \
     $image_name:$image_tag \
-    sh -c "sleep 10; uvicorn main.entrypoint.main:app --host 0.0.0.0 --port 8000"
+    sh -c "dotnet Api.dll"
 throw_error_if_need
 
 timeout_sec=15

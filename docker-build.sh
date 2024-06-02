@@ -9,7 +9,7 @@ function throw_error_if_need() {
 
 echo "Building Docker image..."
 
-image_name=${1:-"micro_tools_image"}
+image_name=${1:-"csharp_microservice_image"}
 image_tag=${2:-"v1.0.0"}
 
 docker build \

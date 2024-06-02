@@ -1,13 +1,13 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: micro-tools-service
+  name: scharp-microservice-service
 spec:
   selector:
-    app: micro-tools
+    app: scharp-microservice
   ports:
     - protocol: TCP
-      port: 8000
-      targetPort: 8000
-      nodePort: 32000
+      port: 5074
+      targetPort: 5074
+      nodePort: 32001
   type: NodePort
