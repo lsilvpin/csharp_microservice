@@ -8,6 +8,8 @@
 	"customizations": {
 		"vscode": {
 			"extensions": [
+				"doggy8088.netcore-extension-pack",
+				"fernandoescolar.vscode-solution-explorer",
 				"ms-azuretools.vscode-docker",
 				"EditorConfig.EditorConfig",
 				"GitHub.copilot",
